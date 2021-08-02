@@ -120,12 +120,12 @@ body {
 }
 
 .sub-page .career-summary {
-  height: 15%;
+  height: 17%;
   overflow: hidden;
 }
 
 .sub-page .work-and-skills {
-  height: 85%;
+  height: 83%;
   position: relative;
   overflow: hidden;
 }
