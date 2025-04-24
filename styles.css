@@ -63,25 +63,41 @@ body {
 .header-wrapper {
   height: 50mm;
   background-color: var(--primary);
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
   color: var(--secondary);
-  padding: 1cm 1cm 1cm 0;
+  display: grid;
+  grid-template-columns: 50mm 1fr 1fr;
+  grid-template-rows: auto 1fr;
+  height: 50mm;
+  gap: 10px;
+  padding-right: 10px;
+  margin: 0 1cm;
+}
+
+.photo-container {
+  grid-column: 1;
+  grid-row: 1/3;
 }
 
 .photo-container .photo {
   width: 50mm;
   height: 50mm;
   background: var(--primary);
-  background-image: url("media/_DSF0005-2-2.jpg");
-  background-position: center;
+  background-image: url("media/IMG_1073.jpg");
+  background-position: center 80%;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .personal-info-container {
-  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.personal-info-container .info-items {
+  margin: 0;
 }
 
 .personal-info-container .info-items,
@@ -91,6 +107,15 @@ body {
 }
 
 .personal-info-container .info-items li {
+  margin-bottom: 0.5rem;
+}
+
+.name-container {
+  grid-column: 2/4;
+  grid-row: 1;
+}
+
+.personal-role {
   margin-bottom: 0.5rem;
 }
 
@@ -120,34 +145,30 @@ body {
 }
 
 .sub-page .career-summary {
-  height: 17%;
   overflow: hidden;
 }
 
 .sub-page .work-and-skills {
-  height: 83%;
   position: relative;
   overflow: hidden;
+  display: flex;
+  justify-content: space-between;
 }
 
 .sub-page .title {
   padding-bottom: 0.3rem;
   border-bottom: 2px solid var(--primary);
-  font-size: 1.25rem;
+  font-size: 1rem;
   text-transform: uppercase;
   margin: 10px 0;
 }
 
 .work-and-skills .work-experience {
   width: 60%;
-  float: left;
-  height: 100%;
 }
 
 .skills-others {
   width: 35%;
-  float: right;
-  height: 100%;
 }
 
 .skills-others ul.list-items {
@@ -164,61 +185,9 @@ body {
   padding-bottom: 1px;
 }
 
-.skills-others ul.list-items li.item .skill-bar {
-  position: relative;
-  width: 100%;
-  height: 8px;
-}
-
-.skills-others ul.list-items li.item .bar {
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
-  position: absolute;
-}
-
-.skills-others ul.list-items li.item .progress {
-  height: 100%;
-  background: var(--primary);
-  border-radius: 3px;
-  position: absolute;
-}
-
-.skills .frontend > p,
-.skills .backend > p,
-.skills .others > p {
-  margin: 0 0 5px;
-}
-
 .skills .list-items,
 .skills .others-list {
   margin-top: 0;
-}
-
-.frontend li.item:nth-child(1) .progress {
-  width: 80%;
-}
-.frontend li.item:nth-child(2) .progress {
-  width: 70%;
-}
-.frontend li.item:nth-child(3) .progress {
-  width: 70%;
-}
-.frontend li.item:nth-child(4) .progress {
-  width: 60%;
-}
-.frontend li.item:nth-child(5) .progress {
-  width: 90%;
-}
-.backend li.item:nth-child(1) .progress {
-  width: 80%;
-}
-.backend li.item:nth-child(2) .progress {
-  width: 80%;
-}
-.backend li.item:nth-child(3) .progress {
-  width: 70%;
 }
 
 .skills-others ul.others-list,
@@ -252,8 +221,7 @@ body {
   font-weight: bold;
 }
 
-.skills-others .soft-skills .soft-list ul.soft-items,
-.skills-others .languages .languages-list .languages-items {
+.skills-others .skills-items {
   list-style-type: none;
   padding: 0;
 }
