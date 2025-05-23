@@ -35,7 +35,7 @@ body {
 }
 .sub-page {
   padding: 0 1cm 1cm;
-  height: 247mm;
+  height: 257mm;
   background: white;
 }
 @page {
@@ -227,6 +227,10 @@ body {
   padding: 0;
 }
 
+.skills-others ul.skills-items li {
+  margin-bottom: 0.2rem;
+}
+
 .skills-others .soft-skills .soft-list ul.soft-items li:not(:last-child) {
   margin-bottom: 5px;
 }
@@ -279,6 +283,9 @@ body {
 
 .experience-summary ul.experience-content {
   padding: 0 0.5rem;
+}
+.experience-summary ul.experience-content li {
+  margin-bottom: 0.5rem;
 }
 
 .experience-title,
