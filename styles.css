@@ -61,14 +61,13 @@ body {
 }
 
 .header-wrapper {
-  height: 50mm;
   background-color: var(--primary);
   color: var(--secondary);
   display: grid;
-  grid-template-columns: 50mm 1fr 1fr;
+  grid-template-columns: 45mm 1fr 1fr;
   grid-template-rows: auto 1fr;
-  height: 50mm;
-  gap: 10px;
+  height: 40mm;
+  gap: 0 10px;
   padding-right: 10px;
 }
 
@@ -78,8 +77,8 @@ body {
 }
 
 .photo-container .photo {
-  width: 50mm;
-  height: 50mm;
+  width: 45mm;
+  height: 40mm;
   background: var(--primary);
   background-image: url("media/IMG_1073.jpg");
   background-position: center 80%;
@@ -116,6 +115,8 @@ body {
 
 .personal-role {
   margin-bottom: 0.5rem;
+  font-size: 1rem;
+  font-weight: bold;
 }
 
 .personal-name {
@@ -123,6 +124,7 @@ body {
   font-size: 1.5rem;
   letter-spacing: 0.175rem;
   font-weight: 900;
+  margin: 0.5rem 0;
 }
 
 .links-container {
@@ -134,7 +136,7 @@ body {
 }
 
 .links-container .links-items li {
-  margin: 1rem 0;
+  margin: 0.5rem 0;
   display: flex;
   align-items: center;
 }
